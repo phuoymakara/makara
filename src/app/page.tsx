@@ -1,7 +1,9 @@
+'use client'
 import { Card } from "@/components/card";
 import { Header } from "@/components/header";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
   const project = ['1','2','3'];
@@ -19,10 +21,11 @@ export default function Home() {
     'M11.9996 4.85999C8.82628 4.85999 6.84294 6.44665 6.04961 9.61999C7.23961 8.03332 8.62794 7.43832 10.2146 7.83499C11.12 8.06109 11.7666 8.71757 12.4835 9.44545C13.6507 10.6295 15.0004 12 17.9496 12C21.1229 12 23.1063 10.4133 23.8996 7.23998C22.7096 8.82665 21.3213 9.42165 19.7346 9.02499C18.8292 8.79889 18.1827 8.1424 17.4657 7.41452C16.2995 6.23047 14.9498 4.85999 11.9996 4.85999ZM6.04961 12C2.87628 12 0.892943 13.5867 0.0996094 16.76C1.28961 15.1733 2.67794 14.5783 4.26461 14.975C5.17 15.2011 5.81657 15.8576 6.53354 16.5855C7.70073 17.7695 9.05039 19.14 11.9996 19.14C15.1729 19.14 17.1563 17.5533 17.9496 14.38C16.7596 15.9667 15.3713 16.5617 13.7846 16.165C12.8792 15.9389 12.2326 15.2824 11.5157 14.5545C10.3495 13.3705 8.99982 12 6.04961 12Z',
     'M5.42333 3.03818C4.13949 3.03818 3.18953 4.16184 3.23206 5.38047C3.27286 6.55123 3.21985 8.0675 2.83811 9.30405C2.45523 10.5442 1.80769 11.3298 0.75 11.4307V12.5694C1.80769 12.6703 2.45523 13.4559 2.83811 14.696C3.21985 15.9326 3.27286 17.4489 3.23206 18.6196C3.18953 19.8381 4.13949 20.9619 5.42352 20.9619H18.5784C19.8622 20.9619 20.812 19.8382 20.7695 18.6196C20.7287 17.4489 20.7817 15.9326 21.1634 14.696C21.5465 13.4559 22.1923 12.6703 23.25 12.5694V11.4307C22.1923 11.3298 21.5465 10.5442 21.1634 9.30405C20.7817 8.06769 20.7287 6.55123 20.7695 5.38047C20.812 4.16203 19.8622 3.03818 18.5784 3.03818H5.42314H5.42333ZM16.0042 14.0714C16.0042 15.7493 14.7526 16.767 12.6756 16.767H9.13983C9.03869 16.767 8.94169 16.7268 8.87017 16.6553C8.79865 16.5838 8.75847 16.4868 8.75847 16.3856V7.61445C8.75847 7.51331 8.79865 7.41631 8.87017 7.34479C8.94169 7.27327 9.03869 7.23309 9.13983 7.23309H12.6554C14.3873 7.23309 15.5239 8.17123 15.5239 9.61161C15.5239 10.6226 14.7593 11.5277 13.7851 11.6862V11.739C15.1113 11.8845 16.0042 12.8028 16.0042 14.0714ZM12.29 8.44199H10.274V11.2896H11.972C13.2846 11.2896 14.0084 10.761 14.0084 9.81621C14.0084 8.93089 13.386 8.44199 12.29 8.44199ZM10.274 12.4195V15.5577H12.3642C13.7308 15.5577 14.4548 15.0093 14.4548 13.9787C14.4548 12.9479 13.7106 12.4193 12.2763 12.4193L10.274 12.4195Z',
   ]
+
   return (
     <>
     <Header/>
-    <main className="px-20">
+    <main className="md:px-20 px-5">
       <div className="w-full my-6">
           <div className="w-full flex justify-center items-center my-6">
               <div className="w-24 h-24 bg-slate-400 rounded-[50%] border border-blue-400 ">
@@ -38,7 +41,7 @@ export default function Home() {
         <h2 className="text-[20px] mb-4">Who I am</h2>
         <div className="grid md:grid-cols-2 grid-cols-1 grap-4 my-8">
           <div className="flex justify-center items-center"><Image className="object-cover rounded-md" width={300} height={50} src={'/pic2.jpg'} alt="pic"/></div>
-          <div><p className="md:mt-0 mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam facere, itaque corrupti mollitia aspernatur odit doloribus exercitationem dolore cupiditate cumque, sed delectus eaque, totam assumenda officia soluta deserunt in quia maiores dicta reiciendis! Et ex quasi iusto nisi, omnis ut.</p></div>
+          <div><p className="md:mt-0 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta adipisci culpa non! At voluptatem, laboriosam soluta repudiandae adipisci sit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam facere, itaque corrupti mollitia aspernatur odit doloribus exercitationem dolore cupiditate cumque, sed delectus eaque, totam assumenda officia soluta deserunt in quia maiores dicta reiciendis! Et ex quasi iusto nisi, omnis ut.</p></div>
         </div>
       </div>
       <div className="my-2" id="works">

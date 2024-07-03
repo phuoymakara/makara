@@ -1,3 +1,5 @@
+'use client'
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
 interface CardProps{
@@ -8,8 +10,9 @@ interface CardProps{
 }
 
 export function Card({id, src, name, typeCard}: CardProps){
+  const {theme} = useTheme()
   return (
-    <div className={typeCard==='tech'?"bg-orange-100 rounded-lg p-6":"bg-red-300 rounded-md p-4"}>
+    <div className={typeCard==='tech'?theme==='light'?'bg-orange-100 rounded-lg p-6':'bg-black': theme === 'light'? 'bg-red-300 rounded-md p-4': 'bg-black'}>
       {name}
     {
       src &&
